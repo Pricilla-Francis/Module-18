@@ -9,10 +9,10 @@ const __dirname = path.dirname(__filename);
 // Load environment variables from the root .env file
 dotenv.config({ path: path.join(__dirname, '../../.env') });
 
-const MONGODB_URI = process.env.MONGO_URI || '';
+const MONGODB_URI = process.env.MONGODB_URI || '';
 
 if (!MONGODB_URI) {
-  console.error('MONGO_URI environment variable is not set');
+  console.error('MONGODB_URI environment variable is not set');
   process.exit(1);
 }
 
